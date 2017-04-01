@@ -4,7 +4,7 @@ pipeline {
     stage('Copy assets') {
       steps {
         echo 'Deploying Simplewebsys.org website'
-        sh 'rsync -avz * websys@simplewebsys.org:~/simplewebsys-home'
+        sh 'rsync -avz images index.html scripts styles websys@simplewebsys.org:~/simplewebsys-home'
       }
     }
   }
